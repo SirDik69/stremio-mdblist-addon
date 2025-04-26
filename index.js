@@ -22,7 +22,6 @@ const manifest = {
 
 const builder = new addonBuilder(manifest);
 
-// Función para transformar datos de MDBList a metadatos para Stremio
 async function getCatalog() {
   const response = await fetch(MDBLIST_JSON_URL);
   const data = await response.json();
@@ -47,7 +46,7 @@ builder.defineCatalogHandler(async ({ id, type }) => {
   return { metas: [] };
 });
 
-// Inicializa Express (para Render)
+// === ESTA PARTE ES OBLIGATORIA EN RENDER ===
 const app = express();
 app.use((req, res) => {
   builder.getInterface().requestHandler(req, res);
