@@ -1,0 +1,14 @@
+{
+  "name": "stremio-mdblist-addon",
+  "version": "1.0.0",
+  "description": "Addon dinámico de Stremio con MDBList",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "stremio-addon-sdk": "^1.0.0"
+  }
+}
